@@ -3,6 +3,11 @@
 </div>
 <form>
 	<label for="slackWish">Enter the name of the new Channel</label>
-	<input type="text" name="slackWish" id="slackWish" ng-model="newChannel">
+	<input type="text" name="slackWish" id="slackWish" ng-model="newChannel" required autofocus>
+	<label for="purpose">Enter purpose of Channel</label>
+	<input type="text" name="purpose" id="purpose" ng-model="purpose" required>
 	<input type="submit" ng-click="submit()">
 </form>
+<ul>
+	<li ng-repeat="channel in channels">{{channel.name}} for the purpose of {{channel.purpose}}</li>
+</ul>
