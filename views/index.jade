@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  ul
+    li
+      a(href='#/') Home
+    li
+      a(href='#/wish') Wishlist
+
+  div(ng-view)
